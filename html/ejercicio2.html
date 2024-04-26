@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio2</title>
+
+    <link rel="stylesheet" href="/css/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Ejercicios Oscar</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-flex justify-content-center w-100 " id="collapsibleNavId">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/html/Index.html" aria-current="page">introduccion
+                            <span class="visually-hidden"></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/html/ejercicio1.html">Ejercicio 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/html/ejercicio2.html">Ejercicio 2 </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/html/ejercicio3.html">Ejercicio 3</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class=" container ">
+
+        <section class="row gap-0  mt-3 " id="contenedor_cartas">
+
+
+
+        </section>
+
+    </main>
+
+    <script>
+
+        async function fectDatos(Listaprovi, url) {
+            try {
+                const response = await fetch(`https://api.jsonbin.io/v3/b/662c1576acd3cb34a83ebaba`)
+                const data = await response.json();
+                console.log(data);
+                return data.record;
+
+            } catch (error) {
+                console.error(error);
+                return Listaprovi;
+            };
+        };
+
+        async function llamadaapi() {
+            let listaprovi = [
+                {
+                    nombre_comida: "Pupusa",
+                    pais_comida: "El Salvador",
+                    descripcion: "Una tortilla gruesa de masa de maíz rellena de queso, frijoles o carne.",
+                    imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzAc95bE3kt7uexEB4znpIDbYEOi9UdsEoor4iGPi11Q&s",
+
+                },
+                {
+                    nombre_comida: "Gallo Pinto",
+                    pais_comida: "Costa Rica",
+                    descripcion: "Un plato a base de arroz y frijoles refritos.",
+                    imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTsDv0A0uFhN645prpUXkDjcfWcEwFjf0wYA&s",
+
+                },
+                {
+                    nombre_comida: "Baleada",
+                    pais_comida: "Honduras",
+                    descripcion: "Una tortilla de harina rellena de frijoles, queso, mantequilla y a veces aguacate.",
+                    imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnYGZeH4DdMHeUehAyjABKXKiIeQwFPMQ8w-65jyycKg&s",
+
+                },
+                {
+                    nombre_comida: "Güirila",
+                    pais_comida: "El Salvador",
+                    descripcion: "Una especie de tortilla gruesa a base de masa de maíz.",
+                    imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY9fG_TRzTSu57utQKbIelTh8g526OcvReDw&s",
+
+                },
+                {
+                    nombre_comida: "Casado",
+                    pais_comida: "Costa Rica",
+                    descripcion: "Un plato que combina arroz, frijoles, carne, ensalada y plátano frito.",
+                    imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5nq_ELSSPKkKLVFL0g9BXocEDwzFUov8av2sHjWSIzA&s",
+
+                },
+                {
+                    nombre_comida: "Sopa de Mondongo",
+                    pais_comida: "Honduras",
+                    descripcion: "Una sopa hecha a base de callos de res.",
+                    imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShRHj_vGmcBn8co_MpdPbfulm39xHhrSuNJA&s",
+
+                },
+                {
+                    nombre_comida: "Tamales",
+                    pais_comida: "El Salvador",
+                    descripcion: "Una masa de maíz rellena con carne, envuelta en hojas de plátano y cocida al vapor.",
+                    imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWFu0Nc3UYKHExV1IxOpykQtIhuXzs-fOzLETK_X3ByoxZRspD27yBcXz7861eAopqkK8&usqp=CAU",
+
+                },
+                {
+                    nombre_comida: "Ceviche",
+                    pais_comida: "Costa Rica",
+                    descripcion: "Un plato de pescado o mariscos marinados en limón.",
+                    imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnvr165-9jNehP7YvRHcNsWaFedC8rCXwd2i3iaDaUcw&s",
+
+                },
+                {
+                    nombre_comida: "Ceviche",
+                    pais_comida: "Costa Rica",
+                    descripcion: "Un plato de pescado o mariscos marinados en limón.",
+                    imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnvr165-9jNehP7YvRHcNsWaFedC8rCXwd2i3iaDaUcw&s",
+
+                },
+
+            ];
+
+            const url = 'https://api.jsonbin.io/v3/b/662c1576acd3cb34a83ebaba';
+            const data = await fectDatos(listaprovi, url);
+            return data;
+        };
+
+        async function rellenarcartas() {
+
+            const contenedor_cartas = document.getElementById('contenedor_cartas');
+
+            for (let i = 0; i < 6; i++) {
+                const cargar = document.createElement('div');
+                cargar.classList.add('col-md-4');
+                cargar.innerHTML = `
+                <div class="card" style="width: 18rem;">
+                <div class="d-flex align-items-center justify-content-center  " style="width: 100%; height: 10rem;">
+                    <div class="spinner-border text-primary " role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+
+                <div class="card-body">
+
+                    <h5 class="card-text placeholder-glow">
+                        <span class="placeholder col-12"></span>
+                    </h5>
+
+                    <p class="card-text placeholder-glow">
+                        <span class="placeholder col-7"></span>
+                        <span class="placeholder col-6"></span>
+                        <span class="placeholder col-8"></span>
+                    </p>
+                </div>
+            </div>
+                `;
+                contenedor_cartas.appendChild(cargar);
+            };
+
+            const datos = await llamadaapi();
+
+            contenedor_cartas.innerHTML = '';
+
+            datos.forEach(element => {
+                const card = document.createElement('div');
+                card.classList.add('col-md-4');
+                card.innerHTML = `
+                <div class="card" style="width: 18rem;">
+                <img class="card-img-top object-fit-cover " src="${element.imagen}" alt="${element.nombre_comida}" style="width: 100%; height: 10rem;">
+
+                <div class="card-body">
+                    <h5 class="card-title">${element.nombre_comida}</h5>
+
+                    <h6 class="card-subtitle mb-2 text-muted">${element.pais_comida}</h6>
+                    <p class="card-text">${element.descripcion}</p>
+                </div>
+            </div>
+                `;
+                contenedor_cartas.appendChild(card);
+
+            });
+        };
+
+        window.onload = async () => {
+
+            await rellenarcartas()
+
+        };
+
+    </script>
+
+
+
+    <script src="/css/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

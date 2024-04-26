@@ -1,0 +1,56 @@
+[
+    {
+        "nombre_comida": "Pupusa",
+        "pais_comida": "El Salvador",
+        "descripcion": "Una tortilla gruesa de masa de maíz rellena de queso, frijoles o carne.",
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzAc95bE3kt7uexEB4znpIDbYEOi9UdsEoor4iGPi11Q&s"
+    },
+    {
+        "nombre_comida": "Gallo Pinto",
+        "pais_comida": "Costa Rica",
+        "descripcion": "Un plato a base de arroz y frijoles refritos.",
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTsDv0A0uFhN645prpUXkDjcfWcEwFjf0wYA&s"
+    },
+    {
+        "nombre_comida": "Baleada",
+        "pais_comida": "Honduras",
+        "descripcion": "Una tortilla de harina rellena de frijoles, queso, mantequilla y a veces aguacate.",
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnYGZeH4DdMHeUehAyjABKXKiIeQwFPMQ8w-65jyycKg&s"
+    },
+    {
+        "nombre_comida": "Güirila",
+        "pais_comida": "El Salvador",
+        "descripcion": "Una especie de tortilla gruesa a base de masa de maíz.",
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY9fG_TRzTSu57utQKbIelTh8g526OcvReDw&s"
+    },
+    {
+        "nombre_comida": "Casado",
+        "pais_comida": "Costa Rica",
+        "descripcion": "Un plato que combina arroz, frijoles, carne, ensalada y plátano frito.",
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5nq_ELSSPKkKLVFL0g9BXocEDwzFUov8av2sHjWSIzA&s"
+    },
+    {
+        "nombre_comida": "Sopa de Mondongo",
+        "pais_comida": "Honduras",
+        "descripcion": "Una sopa hecha a base de callos de res.",
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShRHj_vGmcBn8co_MpdPbfulm39xHhrSuNJA&s"
+    },
+    {
+        "nombre_comida": "Tamales",
+        "pais_comida": "El Salvador",
+        "descripcion": "Una masa de maíz rellena con carne, envuelta en hojas de plátano y cocida al vapor.",
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWFu0Nc3UYKHExV1IxOpykQtIhuXzs-fOzLETK_X3ByoxZRspD27yBcXz7861eAopqkK8&usqp=CAU"
+    },
+    {
+        "nombre_comida": "Ceviche",
+        "pais_comida": "Costa Rica",
+        "descripcion": "Un plato de pescado o mariscos marinados en limón.",
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnvr165-9jNehP7YvRHcNsWaFedC8rCXwd2i3iaDaUcw&s"
+    },
+    {
+        "nombre_comida": "Ceviche",
+        "pais_comida": "Costa Rica",
+        "descripcion": "Un plato de pescado o mariscos marinados en limón.",
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnvr165-9jNehP7YvRHcNsWaFedC8rCXwd2i3iaDaUcw&s"
+    }
+]

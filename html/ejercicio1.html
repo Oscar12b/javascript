@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+
+    <link rel="stylesheet" href="/css/bootstrap/css/bootstrap.min.css">
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Ejercicios Oscar</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-flex justify-content-center w-100 " id="collapsibleNavId">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/html/Index.html" aria-current="page">introduccion
+                            <span class="visually-hidden"></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/html/ejercicio1.html">Ejercicio 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/html/ejercicio2.html">Ejercicio 2 </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/html/ejercicio3.html">Ejercicio 3</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="row d-flex justify-content-center ">
+
+        <section class="col-8 mt-5 mb-5">
+            <h1 class="text-center f-2">Ejemplo de Filter()</h1>
+        </section>
+
+        <section class="shadow rounded-2 p-3 col-8">
+
+            <form onsubmit="return mostrarRespuesta()">
+                <div class="mb-3">
+                    <figure class="d-flex justify-content-center ">
+                        <img src="/img/filter.png" alt="filter" class="img-fluid shadow-sm">
+                    </figure>
+                    <label for="array" class="form-label"></label>
+                    <div class="mb-3">
+                        <label for="" class="form-label">numeritos</label>
+                        <input type="text" class="form-control" name="array" id="array" aria-describedby="helpId"
+                            placeholder="[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" pattern="\[\d+(,\s*\d+)*\]"
+                            value="[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" required />
+                        <small id="helpId" class="form-text text-muted">Ingrese un array de números en el formato [1, 2,
+                            3, 4, 5, 6, 7, 8, 9, 10]</small>
+                    </div>
+
+                </div>
+
+                <article class="col-6 col-md-12 d-flex justify-content-center flex-column ">
+                    <button class="btn btn-primary" type="submit" id="btn_mostrar_respuestas">Mostrar respuesta</button>
+
+                    <h1 class="text-center fs-3 fw-bold" id="respuesta">Respuesta: </h1>
+                </article>
+            </form>
+
+        </section>
+
+
+        <section class="col-8 mt-5 mb-5">
+            <h1 class="text-center f-2">Ejemplo de Reduce()</h1>
+        </section>
+
+        <section class="shadow rounded-2 p-3 col-8">
+
+            <form onsubmit="return mostrarRespuesta2()">
+                <div class="mb-3">
+                    <figure class="d-flex justify-content-center ">
+                        <img class="w-75 h" src="/img/reducew.png" alt="filter" class="img-fluid shadow-sm">
+                    </figure>
+                    <label for="array2" class="form-label">array</label>
+                    <div class="mb-3">
+                        <label for="" class="form-label"></label>
+                        <input type="text" class="form-control" name="array2" id="array2" aria-describedby="helpId"
+                            placeholder="[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" pattern="\[\d+(,\s*\d+)*\]"
+                            value="[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" required />
+                        <small id="helpId" class="form-text text-muted">Ingrese un array de números en el formato [1, 2,
+                            3, 4, 5, 6, 7, 8, 9, 10]</small>
+                    </div>
+
+                </div>
+
+                <article class="col-6 col-md-12 d-flex justify-content-center flex-column ">
+                    <button class="btn btn-primary" type="submit" id="btn_mostrar_respuestas">Mostrar respuesta</button>
+
+                    <h1 class="text-center fs-3 fw-bold" id="respuesta2">Respuesta: </h1>
+                </article>
+            </form>
+
+        </section>
+
+    </main>
+
+    <script>
+
+        const mostrarRespuesta = () => {
+
+            console.log('hola');
+            const repuesta = document.getElementById('repuesta');
+            const array = document.getElementById('array').value;
+
+
+            let arrayjs = JSON.parse(array);
+
+            let filtrodearray = arrayjs.filter((item) => {
+                return item > 5;
+            });
+
+            respuesta.innerHTML = `Respuesta: ${filtrodearray}`;
+
+            return false;
+        }
+
+
+        const mostrarRespuesta2 = () => {
+            console.log('dada');
+            const repuesta2 = document.getElementById('repuesta2');
+            const array = document.getElementById('array2').value;
+
+            arrayjs = JSON.parse(array);
+
+            let reducerray = arrayjs.reduce((acumalador, item) => {
+                return acumalador + item;
+            });
+
+            respuesta2.innerHTML = `Respuesta: ${reducerray}`;
+
+            return false;
+
+        };
+
+    </script>
+
+
+    <script src="/js/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
